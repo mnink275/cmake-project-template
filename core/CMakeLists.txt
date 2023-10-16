@@ -11,6 +11,6 @@ add_library(
 target_include_directories(
     ${PROJECT_NAME}_objs PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include
 )
-# target_link_libraries(
-#     ${PROJECT_NAME}_objs function2
-# )
+target_link_libraries(
+    ${PROJECT_NAME}_objs fmt
+)

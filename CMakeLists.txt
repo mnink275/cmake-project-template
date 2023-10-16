@@ -8,9 +8,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(core)
-# add_subdirectory(third_party/function2)
-
-# set(THIRD_PARTY_LIBS "function2")
+add_subdirectory(third_party/fmt)
 
 add_executable(
     ${PROJECT_NAME} main.cpp

@@ -1,12 +1,11 @@
 #include "greeter.hpp"
 
+#include <fmt/format.h>
+
 namespace ink {
 
 std::string Greeter::MakeGreetingFor(std::string_view who) const {
-  std::string res = "Hello, ";
-  res += who;
-  res += "!";
-  return res;
+  return fmt::format("Hello, {}!", who);
 }
 
 }  // namespace ink

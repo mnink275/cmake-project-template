@@ -1,9 +1,9 @@
 #include "core/include/greeter.hpp"
 
-#include <iostream>
+#include <fmt/core.h>
 
 int main() {
   ink::Greeter greeter;
   auto greeting = greeter.MakeGreetingFor("World");
-  std::cout << greeting << '\n';
+  fmt::print("Greeting: {}\n", greeting);
 }

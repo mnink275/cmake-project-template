@@ -1,0 +1,4 @@
+BasedOnStyle: google
+DerivePointerAlignment: false
+PointerAlignment: Left
+IncludeBlocks: Preserve

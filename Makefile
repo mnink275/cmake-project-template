@@ -23,7 +23,7 @@ build-debug build-release: build-%: cmake-%
 run: build-debug
 	@./build_debug/Greeter
 
-# Run after build-debug
+# Run after cleanup and build
 .PHONY: clean-run
 clean-run: dist-clean
 	@make run

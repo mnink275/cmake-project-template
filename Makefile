@@ -22,9 +22,9 @@ build-debug build-release: build-%: cmake-%
 	@cmake --build build_$* -j $(NPROCS)
 
 # Run
-.PHONY: run
-run: build-debug
-	@./build_debug/Greeter
+.PHONY: run-debug run-release
+run-debug run-release: run-%: build-%
+	@./build_$*/Greeter
 
 # Run with `dist-clean` step
 .PHONY: clean-run

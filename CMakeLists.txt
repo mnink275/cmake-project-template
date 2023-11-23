@@ -4,8 +4,11 @@ project(
     LANGUAGES CXX
 )
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+include(FetchContent)
+
+include(cmake/CompileOptions.cmake)
+include(cmake/Sanitizers.cmake)
+include(cmake/Environment.cmake)
 
 add_subdirectory(core)
 add_subdirectory(third_party/fmt)
@@ -17,21 +20,5 @@ target_link_libraries(
     ${PROJECT_NAME} ${PROJECT_NAME}_objs
 )
 
-target_compile_options(
-    ${PROJECT_NAME} PRIVATE -fsanitize=address
-)
-target_link_options(
-    ${PROJECT_NAME} PRIVATE -fsanitize=address
-)
-
-target_compile_features(
-    ${PROJECT_NAME} PRIVATE cxx_std_17
-)
-target_compile_options(
-    ${PROJECT_NAME} PRIVATE "-Wall" "-Wextra" "-Wpedantic"
-)
-
-include(FetchContent)
 include(CTest)
-
 add_subdirectory(test)

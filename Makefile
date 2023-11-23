@@ -10,7 +10,7 @@ build_release/Makefile:
 build_debug/Makefile:
 	@git submodule update --init
 	@mkdir -p build_debug
-	@cd build_debug && cmake -DCMAKE_BUILD_TYPE=Debug ..
+	@cd build_debug && cmake -DCMAKE_BUILD_TYPE=Debug -DASAN_ENABLED=True ..
 
 # Run cmake configuration
 .PHONY: cmake-debug cmake-release

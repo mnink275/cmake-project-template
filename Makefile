@@ -27,9 +27,9 @@ run-debug run-release: run-%: build-%
 	@./build_$*/Greeter
 
 # Run with `dist-clean` step
-.PHONY: clean-run
-clean-run: dist-clean
-	@make run
+.PHONY: clean-run-debug clean-run-release
+clean-run-debug clean-run-release: clean-run-%: dist-clean
+	@make run-$*
 
 # Cleanup data
 .PHONY: dist-clean

@@ -1,0 +1,51 @@
+Checks: >
+  bugprone-*,
+  google-*,
+  misc-*,
+  modernize-*,
+  performance-*,
+  portability-*,
+  readability-*,
+  clang-diagnostic-*,
+  clang-analyzer-*,
+  cppcoreguidelines-*,
+  modernize-*,
+  -bugprone-unchecked-optional-access,
+  -bugprone-easily-swappable-parameters,
+  -modernize-use-trailing-return-type,
+  -google-readability-todo,
+  -google-build-using-namespace,
+  -google-readability-braces-around-statements,
+  -misc-non-private-member-variables-in-classes,
+  -misc-no-recursion,
+  -cppcoreguidelines-non-private-member-variables-in-classes,
+  -cppcoreguidelines-avoid-const-or-ref-data-members,
+  -cppcoreguidelines-pro-type-union-access,
+  -cppcoreguidelines-pro-bounds-array-to-pointer-decay,
+  -cppcoreguidelines-pro-bounds-constant-array-index,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -readability-braces-around-statements,
+  -readability-magic-numbers,
+  -readability-uppercase-literal-suffix,
+  -readability-redundant-member-init,
+  -readability-avoid-const-params-in-decls,
+  -readability-redundant-access-specifiers,
+  -readability-identifier-length
+WarningsAsErrors: "*"
+HeaderFilterRegex: ''
+FormatStyle:     google
+CheckOptions:
+  - key:             bugprone-unhandled-self-assignment.WarnOnlyIfThisHasSuspiciousField
+    value:           '0'
+  - key:             modernize-use-override.IgnoreDestructors
+    value:           '1'
+  - key:             misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic
+    value:           '1'
+  - key:             google-readability-braces-around-statements.ShortStatementLines
+    value:           '1'
+  - key:             google-readability-namespace-comments.ShortNamespaceLines
+    value:           '10'
+  - key:             google-readability-namespace-comments.SpacesBeforeComments
+    value:           '2'
+  - key:             modernize-pass-by-value.IncludeStyle
+    value:           google

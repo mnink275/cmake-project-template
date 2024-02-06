@@ -1,5 +1,3 @@
-NPROCS = $(shell nproc)
-
 # Release cmake configuration
 build_release/Makefile:
 	@git submodule update --init
@@ -19,7 +17,7 @@ cmake-debug cmake-release: cmake-%: build_%/Makefile
 # Build using cmake
 .PHONY: build-debug build-release
 build-debug build-release: build-%: cmake-%
-	@cmake --build build_$* -j $(NPROCS)
+	@cmake --build build_$* -j $(shell nproc)
 
 # Run
 .PHONY: run-debug run-release

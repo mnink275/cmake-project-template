@@ -1,4 +1,4 @@
-# Simple C++17 project template
+# Simple C++ project template for Linux
 
 ## Features:
 - C++ sources and headers directories building via CMake
@@ -7,6 +7,11 @@
 - CI via Github Actions
 - clang-format for code formatting
 - Makefile with convenient commands
+
+## Prereguisetes for use with VSCode:
+- [Clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) extention (used as static analysiser, code browsing, IntelliSense)
+- [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) extention (used as debugger). Note: the extention IntelliSense is disabled (check [settings.json](/home/ink275/repositories/cmake-project-template/.vscode/settings.json))
+
 
 ## Usage:
 - Use `make build-(debug/release)` to produce (debug/release) build

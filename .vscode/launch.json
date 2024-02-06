@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch (gdb)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build_debug/Greeter",
+      "args": [],
+      "stopAtEntry": false,
+      "MIMode": "gdb",
+      "linux": {
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+      },
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+    }
+  ]
+}

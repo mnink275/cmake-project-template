@@ -13,6 +13,11 @@
         "MIMode": "gdb",
         "miDebuggerPath": "/usr/bin/gdb",
       },
+      "setupCommands": [
+        {
+          "text": "-enable-pretty-printing",
+        }
+      ],
       "cwd": "${workspaceFolder}",
       "environment": [],
     }

@@ -20,5 +20,7 @@ target_link_libraries(
     ${PROJECT_NAME} ${PROJECT_NAME}_objs
 )
 
-include(CTest)
-add_subdirectory(test)
+if (CMAKE_BUILD_TYPE MATCHES "Debug")
+    include(CTest)
+    add_subdirectory(test)
+endif()

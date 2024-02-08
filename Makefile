@@ -24,14 +24,14 @@ build-debug build-release: build-%: cmake-%
 run-debug run-release: run-%: build-%
 	@./build_$*/Greeter
 
-# Run with `dist-clean` step
+# Run with `clean` step
 .PHONY: clean-run-debug clean-run-release
-clean-run-debug clean-run-release: clean-run-%: dist-clean
+clean-run-debug clean-run-release: clean-run-%: clean
 	@make run-$*
 
 # Cleanup data
-.PHONY: dist-clean
-dist-clean:
+.PHONY: clean
+clean:
 	@rm -rf build_*
 
 # Format the sources

@@ -10,7 +10,7 @@
 
 ## Prereguisetes for use with VSCode:
 - [Clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) extention (used as static analysiser, code browsing, IntelliSense)
-- [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) extention (used as debugger). Note: the extention IntelliSense is disabled (check [settings.json](/home/ink275/repositories/cmake-project-template/.vscode/settings.json))
+- [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) extention (used as debugger). Note: the extention IntelliSense is disabled (check [settings.json](.vscode/settings.json))
 
 ## Usage:
 - Use `make build-(debug/release)` to produce (debug/release) build

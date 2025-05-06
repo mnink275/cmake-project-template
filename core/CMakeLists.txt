@@ -1,8 +1,12 @@
-file(
-    GLOB SOURCES ${CMAKE_CURRENT_LIST_DIR}/src/*.cpp
+set(INCLUDE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/include")
+set(SRC_PATH "${CMAKE_CURRENT_SOURCE_DIR}/src")
+
+set(HEADERS
+    ${INCLUDE_PATH}/greeter.hpp
 )
-file(
-    GLOB HEADERS ${CMAKE_CURRENT_LIST_DIR}/include/*.hpp
+
+set(SOURCES
+    ${SRC_PATH}/greeter.cpp
 )
 
 add_library(

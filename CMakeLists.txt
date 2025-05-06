@@ -8,7 +8,6 @@ include(FetchContent)
 
 include(cmake/CompileOptions.cmake)
 include(cmake/Sanitizers.cmake)
-include(cmake/Environment.cmake)
 
 add_subdirectory(core)
 add_subdirectory(third_party/fmt)
